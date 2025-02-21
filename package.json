@@ -1,0 +1,65 @@
+{
+  "name": "@trustpath/device-intelligence-js-sdk",
+  "version": "0.1.0",
+  "description": "A JavaScript SDK for collecting and analyzing device/browser data, enabling enhanced analytics and insights for web applications.",
+  "author": "TrustPath.io",
+  "license": "AGPL-3.0-or-later",
+  "keywords": [
+    "fingerprint",
+    "fingerprinting",
+    "device-fingerprint",
+    "device-fingerprinting",
+    "browser-fingerprint",
+    "browser-fingerprinting",
+    "audio-fingerprint",
+    "audio-fingerprinting",
+    "canvas-fingerprint",
+    "canvas-fingerprinting",
+    "cookie-fingerprint",
+    "cookie-fingerprinting",
+    "visitor-identifier",
+    "fraud-detection"
+  ],
+  "unpkg": "dist/trustpath/device-intelligence-js-sdk.umd.js",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/trustpath-device-intelligence-js-sdk.cjs.js",
+  "module": "./dist/trustpath-device-intelligence-js-sdk.esm.js",
+  "types": "./dist/trustpath-device-intelligence-js-sdk.esm.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/trustpath-device-intelligence-js-sdk.esm.js",
+      "require": "./dist/trustpath-device-intelligence-js-sdk.cjs.js"
+    }
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "rm -rf dist/* && rm -rf types/* && rollup -c"
+  },
+  "dependencies": {
+    "@thumbmarkjs/thumbmarkjs": "0.19.1",
+    "@types/ua-parser-js": "2.0.0",
+    "ua-parser-js": "2.0.2",
+    "@aws-crypto/sha256-browser": "5.2.0"
+  },
+  "devDependencies": {
+    "rollup-plugin-polyfill-node": "0.13.0",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@types/node": "^22.10.1",
+    "@types/ua-parser-js": "^0.7.39",
+    "@types/webpack-env": "^1.18.5",
+    "@webpack-cli/generators": "^3.0.7",
+    "path": "^0.12.7",
+    "rollup": "^4.28.1",
+    "rollup-plugin-dts": "^6.1.1",
+    "ts-jest": "^29.2.5",
+    "ts-loader": "^9.5.1",
+    "ts-md5": "^1.3.1",
+    "typescript": "^5.7.2"
+  }
+}
