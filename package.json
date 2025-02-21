@@ -1,6 +1,6 @@
 {
   "name": "@trustpath/device-intelligence-js-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A JavaScript SDK for collecting and analyzing device/browser data, enabling enhanced analytics and insights for web applications.",
   "author": "TrustPath.io",
   "license": "AGPL-3.0-or-later",
@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "@thumbmarkjs/thumbmarkjs": "0.19.1",
-    "@types/ua-parser-js": "2.0.0",
+    "@types/ua-parser-js": "0.7.39",
     "ua-parser-js": "2.0.2",
     "@aws-crypto/sha256-browser": "5.2.0"
   },
