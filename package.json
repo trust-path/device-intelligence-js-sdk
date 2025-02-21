@@ -4,6 +4,7 @@
   "description": "A JavaScript SDK for collecting and analyzing device/browser data, enabling enhanced analytics and insights for web applications.",
   "author": "TrustPath.io",
   "license": "AGPL-3.0-or-later",
+  "type": "module",
   "keywords": [
     "fingerprint",
     "fingerprinting",
