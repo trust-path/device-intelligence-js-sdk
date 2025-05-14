@@ -14,12 +14,14 @@ export interface Component {
 
 export type TrustPathDeviceIntelligence = {
   device_hash: string;
-  device_type: string | undefined;
-  device_os: string | undefined;
   device_model: string | undefined;
+  device_vendor: string | undefined;
+  os_name: string | undefined;
+  os_version: string | undefined;
   browser_fingerprint: string;
   browser_name: string | undefined;
   browser_version: string | undefined;
+  browser_major_version: string | undefined;
   cookie_enabled: boolean;
   browser_type: string | undefined;
 };
@@ -120,12 +122,14 @@ async function createDeviceIntelligenceFor(): Promise<TrustPathDeviceIntelligenc
 
   return {
     device_hash: await hash(JSON.stringify(device_data)),
-    device_type: agent.device.type,
-    device_os: agent.os.toString(),
     device_model: agent.device.model,
+    device_vendor: agent.device.vendor,
+    os_name: agent.os.name,
+    os_version: agent.os.version,
     browser_fingerprint: fingerprint,
     browser_name: agent.browser.name,
     browser_version: agent.browser.version,
+    browser_major_version: agent.browser.major,
     browser_type: agent.browser.type,
     cookie_enabled: (thumbmarkjs as any).system.cookieEnabled,
   };
